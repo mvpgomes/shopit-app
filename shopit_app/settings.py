@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls'
+    'authentication_app'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -51,22 +51,20 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'api.urls'
+ROOT_URLCONF = 'shopit_app.urls'
 
-WSGI_APPLICATION = 'api.wsgi.application'
-
+WSGI_APPLICATION = 'shopit_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.mysql'),
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'shopit_db',
+        'USER': 'shopit',
+        'PASSWORD': 'shopit_admin',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
@@ -89,9 +87,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 # Parse database configuration from $DATABASE_URL
-DATABASES['default'] =  dj_database_url.config()
+# DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -107,3 +104,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Changes the model to use for authentication
+AUTH_USER_MODEL = 'authentication_app.Account'
