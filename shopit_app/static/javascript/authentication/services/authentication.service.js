@@ -3,7 +3,7 @@
  * @namespace shopit_app.authentication.services
  */
 (function () {
-  'use strict'
+  'use strict';
 
   angular
     .module('shopit_app.authentication.services')
