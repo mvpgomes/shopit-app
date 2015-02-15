@@ -6,10 +6,10 @@
    * Declare the application modules.
    */
   angular
-    .module('api', [
-      'api.routes',
-      'api.authentication',
-      'api.config',
+    .module('shopit_app', [
+      'shopit_app.routes',
+      'shopit_app.authentication',
+      'shopit_app.config',
     ]);
     .run(run)
 
@@ -17,8 +17,8 @@
 
   // Declare the application modules dependencies.
   angular
-    .module('api.routes', ['ngRoute']);
-    .module('api.config', []);
+    .module('shopit_app.routes', ['ngRoute']);
+    .module('shopit_app.config', []);
 
   /**
    * @name : run
