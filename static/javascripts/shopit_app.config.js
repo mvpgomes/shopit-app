@@ -3,10 +3,10 @@
   'use strict';
 
   angular
-    .module('api.config')
+    .module('shopit_app.config')
     .config(config);
 
-  config.inject['$locationProvider'];
+  config.inject = ['$locationProvider'];
 
   /**
    * @name : config
@@ -14,6 +14,6 @@
    */
   function config($locationProvider) {
     $locationProvider.html5Mode(true);
-    $locationProvider.hasPrefix('!');
+    $locationProvider.hashPrefix('!');
   }
 })();
