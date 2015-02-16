@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.conf.urls import include, patterns, url
 
 from rest_framework_nested import routers

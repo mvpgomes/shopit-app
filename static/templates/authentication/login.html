@@ -3,18 +3,18 @@
     <h1>Login</h1>
     <div class="well">
       <!-- Login form -->
-      <form role="form" ng-submit="rc.login()">
+      <form role="form" ng-submit="lc.login()">
         <!-- Alert form -->
         <div class="alert alert-danger" ng-show="error" ng-bind="bind"></div>
         <!-- Email field -->
         <div class="form-group">
           <label for="login_email">Email</label>
-          <input type="text" class="form-control" id="login_email" ng-model="rc.email" placeholder="ex. john@gmail.com"/>
+          <input type="text" class="form-control" id="login_email" ng-model="lc.email" placeholder="ex. john@gmail.com"/>
         </div>
         <!-- Password field -->
         <div class="form-group">
           <label for="login_password">Password</label>
-          <input type="password" class="form-control" id="login_password" ng-model="rc.password" placeholder="ex. johngoogleplus"/>
+          <input type="password" class="form-control" id="login_password" ng-model="lc.password" placeholder="ex. johngoogleplus"/>
         </div>
         <!-- Submit button -->
         <div class="form-group">

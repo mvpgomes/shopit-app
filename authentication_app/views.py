@@ -44,7 +44,6 @@ class AccountViewSet(viewsets.ModelViewSet):
     @desc : Defines the login view.
 '''
 class LoginView(views.APIView):
-
     def post(self, request, format=None):
         data = json.loads(request.body)
         email = data.get('email', None)
@@ -66,4 +65,4 @@ class LoginView(views.APIView):
             return Response({
                 'status' : 'Unauthorized',
                 'message' : 'Username/password combination invalid.'
-            }, status=status.HTTP_401_UNAUTHORIZED)             
+            }, status=status.HTTP_401_UNAUTHORIZED)
