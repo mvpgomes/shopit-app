@@ -18,6 +18,11 @@
         controller: 'RegisterController',
         controllerAs: 'rc',
         templateUrl: '/static/templates/authentication/register.html'
-      }).otherwise('/');
+      }).otherwise('/')
+      .when('/login', {
+        controller: 'LoginController',
+        controllerAs: 'lc',
+        templateUrl: '/static/templates/authentication/login.html'
+      });
   }
 })();
