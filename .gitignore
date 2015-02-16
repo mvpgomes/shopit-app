@@ -7,11 +7,14 @@ venv
 # Dot-Env
 .env
 
+# Bower components
+#static/bower_components
+
 # Node modules
 node_modules/
 
 # Uglified JavaScript
-dist/
+#dist/
 
 # Staticfiles
 staticfiles/
