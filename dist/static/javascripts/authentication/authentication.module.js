@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("shopit_app.authentication",["shopit_app.authentication.services","shopit_app.authentication.controllers"]),angular.module("shopit_app.authentication.controllers",[]),angular.module("shopit_app.authentication.services",["ngCookies"])}();

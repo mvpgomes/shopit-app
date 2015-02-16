@@ -1,0 +1,1 @@
+!function(){"use strict";function t(t,e,n){function o(){n.register(i.email,i.password,i.username)}var i=this;i.register=o}angular.module("shopit_app.authentication.controllers").controller("RegisterController",t),t.$inject=["$location","$scope","Authentication"]}();

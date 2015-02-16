@@ -1,0 +1,1 @@
+!function(){"use strict";function t(t,n){function e(t,e,i){return n.post("/api/v1/accounts/",{username:i,email:t,password:e})}var i={register:e};return i}angular.module("shopit_app.authentication.services").factory("Authentication",t),t.$inject=["$cookies","$http"]}();
