@@ -108,7 +108,7 @@
     */
     function logout() {
       return $http.post('/api/v1/auth/logout/')
-      then(logoutSuccessFn, logoutErrorFn);
+        .then(logoutSuccessFn, logoutErrorFn);
 
       /**
       * @name logoutSuccessFn
@@ -127,6 +127,7 @@
         console.error('Epic Failure!');
       }
     }
+
     /**
     * @name getAuthenticatedAccount
     * @desc Return the currently authenticated account

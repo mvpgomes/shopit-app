@@ -1,5 +1,5 @@
 /**
-* NavBarController
+* NavbarController
 * @namespace shopit_app.layout.controllers
 */
 (function () {

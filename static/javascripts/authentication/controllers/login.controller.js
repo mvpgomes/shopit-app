@@ -39,7 +39,6 @@
     * @memberOf shopit_app.authentication.controllers.LoginController
     */
     function login() {
-      console.log(lc.email + " " + lc.password);
       Authentication.login(lc.email, lc.password);
     }
   }

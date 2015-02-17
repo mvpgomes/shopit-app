@@ -8,8 +8,9 @@
   angular
     .module('shopit_app', [
       'shopit_app.routes',
-      'shopit_app.authentication',
       'shopit_app.config',
+      'shopit_app.authentication',
+      'shopit_app.layout',
     ]);
 
   // Declare the application modules dependencies.
@@ -22,7 +23,7 @@
   angular
     .module('shopit_app')
     .run(run);
-    
+
   run.$inject = ['$http'];
 
   /**
