@@ -25,6 +25,7 @@
       getAuthenticatedAccount : getAuthenticatedAccount,
       isAuthenticated : isAuthenticated,
       login : login,
+      logout : logout,
       register : register,
       setAuthenticatedAccount : setAuthenticatedAccount,
       unauthenticate : unauthenticate
@@ -99,6 +100,33 @@
       }
     }
 
+    /**
+    * @name logout
+    * @desc Try to log the user out
+    * @returns {Promise}
+    * @memberOf shopit_app.authentication.services.Authentication
+    */
+    function logout() {
+      return $http.post('/api/v1/auth/logout/')
+      then(logoutSuccessFn, logoutErrorFn);
+
+      /**
+      * @name logoutSuccessFn
+      * @desc Unautheticate and redirect to index with page reload
+      */
+      function logoutSuccessFn(data, status, headers, config) {
+        Authentication.unauthenticate();
+        window.location = '/';
+      }
+
+      /**
+      * @name logoutErrorFn
+      * @desc Log "Epic Failure!" to the console
+      */
+      function logoutErrorFn(data, status, headers, config) {
+        console.error('Epic Failure!');
+      }
+    }
     /**
     * @name getAuthenticatedAccount
     * @desc Return the currently authenticated account
