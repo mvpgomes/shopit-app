@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'compressor',
-    'authentication_app'
+    'authentication_app',
+    'promotion_app'
 )
 
 MIDDLEWARE_CLASSES = (
