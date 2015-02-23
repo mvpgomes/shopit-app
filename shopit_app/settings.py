@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'compressor',
     'authentication_app',
-    'promotion_app'
+    'promotions_app'
 )
 
 MIDDLEWARE_CLASSES = (
