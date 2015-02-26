@@ -4,7 +4,7 @@ from authentication_app.models import Account
 
 '''
     @name : Account Serializers
-    @desc : Define a serializer that transform the Account Model in a JSON object.
+    @desc : Define a serializer that transform the Account Model into a JSON object.
 '''
 class AccountSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, required=False)

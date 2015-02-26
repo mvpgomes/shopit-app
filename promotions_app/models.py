@@ -8,23 +8,27 @@ from authentication_app.models import Account
 '''
 class PromotionManager(models.Manager):
 
+    def get_queryset(name):
+        return super(PromotionManager, self).get_queryset().filter(name=name)
+
     def create_promotion(self, name, desc, expire_date, image):
-        promotion = self.create(name=name, desc=desc, expire_date=expire_date, image=image)
+        promotion = get_queryset(name)
         promotion.save()
         return promotion
 
     def delete_promotion(self, name):
-        promotion = super(PromotionManager, self).get_queryset().filter(name=name)
+        promotion = get_queryset(name)
         promotion.delete()
 
     def update_promotion(self, name, expire_date):
-        promotion = super(PromotionManager, self).get_queryset().filter(name=name)
+        promotion = get_queryset(name  )
         promotion.set_expire_date(expire_date)
+        promotion.save()
         return promotion
 
 '''
     @name : Promotion.
-    @desc : The promotion model.
+    @desc : Model that represents a promotion.
 '''
 class Promotion(models.Model):
     account = models.ForeignKey(Account)
@@ -36,15 +40,15 @@ class Promotion(models.Model):
 
     expire_date = models.DateTimeField(auto_now=True)
 
-    image = models.ImageField(upload_to='promotions')
+    image = models.ImageField(upload_to='promotions',)
 
     objects = PromotionManager()
 
-    def _unicode_(self):
+    def __unicode__(self):
         return self.name
 
-    def get_short_promotion(self):
+    def get_short_description(self):
         return ' '.join([self.name, self.expire_date])
 
-    def get_promotion(self):
+    def get_description(self):
         return ' '.join([self.name, self.desc, self.expire_date])

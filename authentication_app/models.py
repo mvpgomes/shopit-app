@@ -29,9 +29,9 @@ class AccountManager(BaseUserManager):
 
 '''
     @name : Account
-    @desc : Account model. This model is generic to represent a user that has an
-    account in the ShopIT application. This user can be the store manager or the
-    mobile app user.
+    @desc : Model that represents an account. This model is generic to represent a user
+    that has an account in the ShopIT application. This user can be the store manager
+    or the mobile app user.
 '''
 class Account(AbstractBaseUser):
     email = models.EmailField(unique=True)

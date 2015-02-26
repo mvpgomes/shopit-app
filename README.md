@@ -112,7 +112,7 @@ $ deactivate
 
 ## Deploying to Heroku
 
-Before to deploy the application on Heroku make sure that you have committed the changes in your repository. After that execute the command:
+Before to deploy the application on Heroku make sure that you have committed the changes in your local repository. After that execute the command:
 
 ```sh
 $ git push heroku master
