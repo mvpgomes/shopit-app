@@ -1,4 +1,4 @@
-# ShopIT app
+# ShopIT app [![Build Status](https://magnum.travis-ci.com/mvpgomes/shopit-app.svg?token=XjksqSRcjpvMxqiPdFF7&branch=master)](https://magnum.travis-ci.com/mvpgomes/shopit-app)
 
 An AngularJS and Django to manage promotions that are available to customers through the ShopIT mobile app.
 
